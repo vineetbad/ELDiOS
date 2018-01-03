@@ -44,6 +44,7 @@ class LogInViewController: UIViewController {
             performSegue(withIdentifier: "HOSPage", sender: nil)
         }
         //TODO: Before the segue need to load up all the data of the driver through the database.
+        
         else {
             
             //TODO: If innacurate what to do
@@ -60,6 +61,23 @@ class LogInViewController: UIViewController {
         }
 
 
+    }
+    
+    //This below is the loading view that comes up after the database is checked. Will call this function when
+    
+    let activityIndicator = UIActivityIndicatorView()
+
+    func databaseLoadingView(){
+        //Activity indicator so that the database can load up and the user can't touch anything:
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    func databaseDoneLoadingView(){
+        activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
     }
 
     

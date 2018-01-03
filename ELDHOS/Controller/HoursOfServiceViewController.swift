@@ -12,7 +12,7 @@ class HoursOfServiceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //TODO : load all the information from the database based on the username and password from the last page
         // Do any additional setup after loading the view.
     }
 
