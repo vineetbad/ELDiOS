@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070304211FFC130600322600 /* HoursOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070304201FFC130600322600 /* HoursOfServiceViewController.swift */; };
+		076B930E1FFEC7EE0057F94C /* DrivingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076B930D1FFEC7EE0057F94C /* DrivingOptions.swift */; };
 		077BF41D1FF35379002285DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BF41C1FF35379002285DA /* AppDelegate.swift */; };
 		077BF41F1FF35379002285DA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BF41E1FF35379002285DA /* LogInViewController.swift */; };
 		077BF4221FF35379002285DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077BF4201FF35379002285DA /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		070304201FFC130600322600 /* HoursOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursOfServiceViewController.swift; sourceTree = "<group>"; };
+		076B930D1FFEC7EE0057F94C /* DrivingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingOptions.swift; sourceTree = "<group>"; };
 		077BF4191FF35379002285DA /* ELDHOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELDHOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		077BF41C1FF35379002285DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		077BF41E1FF35379002285DA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		0703041D1FFC120800322600 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				076B930D1FFEC7EE0057F94C /* DrivingOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				077BF41F1FF35379002285DA /* LogInViewController.swift in Sources */,
 				070304211FFC130600322600 /* HoursOfServiceViewController.swift in Sources */,
+				076B930E1FFEC7EE0057F94C /* DrivingOptions.swift in Sources */,
 				077BF41D1FF35379002285DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

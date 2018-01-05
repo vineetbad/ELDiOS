@@ -117,6 +117,10 @@
                         <viewLayoutGuide key="safeArea" id="RY7-ym-FzM"/>
                     </view>
                     <navigationItem key="navigationItem" title="HOS" id="LAn-3B-dOu"/>
+                    <connections>
+                        <outlet property="drivingOptions" destination="dAM-Ly-YUB" id="hHT-Uz-pgA"/>
+                        <outlet property="timerDriving" destination="LkV-gi-VV5" id="PTq-Aa-6Z6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzK-A4-heB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,19 +143,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eap-5g-vIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1439" y="133"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="YUD-Oo-mCj">
-            <objects>
-                <viewController id="dZ0-Uf-YkF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EVg-Gh-2zr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XDH-uc-DPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
