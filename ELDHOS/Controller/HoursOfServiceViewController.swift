@@ -43,7 +43,8 @@ class HoursOfServiceViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        popNewEvent(drivingOption : DrivingOptions().allDrivingOptions[row])
+        let currentDrivingOptionSelected = DrivingOptions().allDrivingOptions[row]
+        popNewEvent(drivingOption : currentDrivingOptionSelected)
     }
     
     
@@ -54,7 +55,7 @@ class HoursOfServiceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     func popNewEvent(drivingOption : String){
         //TODO Over here I want to present popover presentation of the event creater
-        
+        print(drivingOption)
     }
     
     
