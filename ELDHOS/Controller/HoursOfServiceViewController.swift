@@ -12,11 +12,9 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
-    @IBOutlet var aboveTimerDrivingOption: UILabel!
     
     @IBOutlet var timerDriving: UILabel!
-    var currentDrivingOptionSelected = "OffDuty"
-    
+    var currentDrivingOption = "OffDuty"
     
     //---This is hiding the table view which lists all the different driving options ----//
     @IBAction func drivingOptionChange(_ sender: Any) {
@@ -27,11 +25,9 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         drivingOptionsTable.isHidden = true
     }
-        
+    
     //END
-    
     @IBOutlet var drivingOptionsTable: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO : load all the information from the database based on the username and password from the last page
@@ -45,7 +41,6 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
         // Dispose of any resources that can be recreated.
     }
     
-        
     //----TABLE VIEW STUFF ------------------------------------//
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +56,6 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
         return cell
         
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(DrivingOptions().allDrivingOptions[indexPath.row])
