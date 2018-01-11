@@ -8,5 +8,12 @@
 
 import Foundation
 struct DrivingOptions {
-    let allDrivingOptions = ["OffDuty", "Sleeper", "On Duty", "Driving"]
+    let allDrivingOptions = ["OffDuty", "Sleeper", "Driving", "OnDuty"]
+    
+    enum EachDifferentOption {
+        case OffDuty
+        case Sleeper
+        case OnDuty
+        case Driving
+    }
 }

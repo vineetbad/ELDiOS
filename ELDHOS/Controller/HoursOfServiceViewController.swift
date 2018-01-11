@@ -8,20 +8,27 @@
 
 import UIKit
 
-class HoursOfServiceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
     
 
-    @IBOutlet var drivingOptions: UIPickerView!
     @IBOutlet var timerDriving: UILabel!
+    var currentDrivingOptionSelected = "OffDuty"
+    @IBAction func drivingOptionChange(_ sender: Any) {
+        
+        drivingOptionsTable.isHidden = !drivingOptionsTable.isHidden
+        
+    }
     
-    
+    @IBOutlet var drivingOptionsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO : load all the information from the database based on the username and password from the last page
         // Do any additional setup after loading the view.
-        self.drivingOptions.delegate = self
-        self.drivingOptions.dataSource = self
+        self.drivingOptionsTable.delegate = self
+        self.drivingOptionsTable.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,26 +36,24 @@ class HoursOfServiceViewController: UIViewController, UIPickerViewDelegate, UIPi
         // Dispose of any resources that can be recreated.
     }
     
+        
+    //----TABLE VIEW STUFF ------------------------------------//
     
-    //------THIS IS THE PICKER STUFF ------//
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DrivingOptions().allDrivingOptions.count
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return DrivingOptions().allDrivingOptions.count
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Driving Options", for: indexPath)
+        cell.textLabel?.text = DrivingOptions().allDrivingOptions[indexPath.row]
+        return cell
+        
     }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return DrivingOptions().allDrivingOptions[row]
-    }
+
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let currentDrivingOptionSelected = DrivingOptions().allDrivingOptions[row]
-        popNewEvent(drivingOption : currentDrivingOptionSelected)
-    }
-    
-    
-    //------ END ------//
     
     
     //---- DO THE NEW EVENT WHENEVER SOMETHING IS PICKED ------//
