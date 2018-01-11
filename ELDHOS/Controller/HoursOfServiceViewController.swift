@@ -12,14 +12,23 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
-
+    @IBOutlet var aboveTimerDrivingOption: UILabel!
+    
     @IBOutlet var timerDriving: UILabel!
     var currentDrivingOptionSelected = "OffDuty"
+    
+    
+    //---This is hiding the table view which lists all the different driving options ----//
     @IBAction func drivingOptionChange(_ sender: Any) {
         
         drivingOptionsTable.isHidden = !drivingOptionsTable.isHidden
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        drivingOptionsTable.isHidden = true
+    }
+        
+    //END
     
     @IBOutlet var drivingOptionsTable: UITableView!
     
@@ -52,7 +61,15 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
         return cell
         
     }
-
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(DrivingOptions().allDrivingOptions[indexPath.row])
+        drivingOptionsTable.isHidden = true
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    
     
     
     
