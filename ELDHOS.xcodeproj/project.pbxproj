@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070304211FFC130600322600 /* HoursOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070304201FFC130600322600 /* HoursOfServiceViewController.swift */; };
+		071F46D9200941D9007676F9 /* CreateEventChangeDrivingOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F46D8200941D9007676F9 /* CreateEventChangeDrivingOptionViewController.swift */; };
 		076B930E1FFEC7EE0057F94C /* DrivingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076B930D1FFEC7EE0057F94C /* DrivingOptions.swift */; };
 		077BF41D1FF35379002285DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BF41C1FF35379002285DA /* AppDelegate.swift */; };
 		077BF41F1FF35379002285DA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BF41E1FF35379002285DA /* LogInViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		070304201FFC130600322600 /* HoursOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursOfServiceViewController.swift; sourceTree = "<group>"; };
+		071F46D8200941D9007676F9 /* CreateEventChangeDrivingOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventChangeDrivingOptionViewController.swift; sourceTree = "<group>"; };
 		076B930D1FFEC7EE0057F94C /* DrivingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingOptions.swift; sourceTree = "<group>"; };
 		077BF4191FF35379002285DA /* ELDHOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELDHOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		077BF41C1FF35379002285DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 				077BF41E1FF35379002285DA /* LogInViewController.swift */,
 				077BF41C1FF35379002285DA /* AppDelegate.swift */,
 				070304201FFC130600322600 /* HoursOfServiceViewController.swift */,
+				071F46D8200941D9007676F9 /* CreateEventChangeDrivingOptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				077BF41F1FF35379002285DA /* LogInViewController.swift in Sources */,
 				070304211FFC130600322600 /* HoursOfServiceViewController.swift in Sources */,
 				076B930E1FFEC7EE0057F94C /* DrivingOptions.swift in Sources */,
+				071F46D9200941D9007676F9 /* CreateEventChangeDrivingOptionViewController.swift in Sources */,
 				077BF41D1FF35379002285DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

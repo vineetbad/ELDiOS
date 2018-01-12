@@ -87,6 +87,10 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
             
             currentDrivingOption = tableSelectedDrivingOption
             aboveTimerDrivingOption.text! = currentDrivingOption
+            
+            //segue to get the new controller
+            performSegue(withIdentifier: "CreateEvent", sender: nil)
+            //here have a function that makes the new modular page pop up
         }
         drivingOptionsTable.isHidden = true
         tableView.deselectRow(at: indexPath, animated: false)
@@ -103,6 +107,9 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
         print(drivingOption)
     }
     
+    //---- TODO: Create a function for when Ok is selected - this talks to the database and adds things and also changes the timer
+    
+    //TODO: Time
     
     
     /*
