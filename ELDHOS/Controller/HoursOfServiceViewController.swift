@@ -12,6 +12,7 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
+    @IBOutlet var aboveTimerDrivingOption: UILabel!
     
     @IBOutlet var timerDriving: UILabel!
     var currentDrivingOption = "OffDuty"
@@ -35,11 +36,14 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
         self.drivingOptionsTable.delegate = self
         self.drivingOptionsTable.dataSource = self
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     //----TABLE VIEW STUFF ------------------------------------//
     
@@ -53,16 +57,34 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Driving Options", for: indexPath)
         cell.textLabel?.text = DrivingOptions().allDrivingOptions[indexPath.row]
+        
+        //        --TODO one day: Need to find a way to grey out the already selected cell. May not work though
+//        if cell.textLabel?.text == currentDrivingOption {
+//            cell.isUserInteractionEnabled = false
+//            cell.textLabel?.isEnabled = false
+//        }
+        
+        //END
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(DrivingOptions().allDrivingOptions[indexPath.row])
+        let tableSelectedDrivingOption = DrivingOptions().allDrivingOptions[indexPath.row]
+        //when the picked option is the same as already picked
+        if tableSelectedDrivingOption == currentDrivingOption {
+            print("Picked the same one")
+        }
+        else {
+            
+            //this is what happens when a new option is picked
+            
+            currentDrivingOption = tableSelectedDrivingOption
+            aboveTimerDrivingOption.text! = currentDrivingOption
+        }
         drivingOptionsTable.isHidden = true
         tableView.deselectRow(at: indexPath, animated: false)
     }
-    
     
     
     

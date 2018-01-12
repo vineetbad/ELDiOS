@@ -148,6 +148,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="hpT-ek-xMk"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="aboveTimerDrivingOption" destination="QX5-T5-yLs" id="xoL-e0-hFB"/>
                         <outlet property="drivingOptionsTable" destination="fdN-8t-60j" id="IBR-ni-gRc"/>
                         <outlet property="timerDriving" destination="LkV-gi-VV5" id="PTq-Aa-6Z6"/>
                     </connections>
