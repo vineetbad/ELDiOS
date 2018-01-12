@@ -11,10 +11,13 @@ import UIKit
 class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
+    //This is the label which shows what is currently selected
     @IBOutlet var aboveTimerDrivingOption: UILabel!
-    
+   
+    //this is the Timer
     @IBOutlet var timerDriving: UILabel!
+    
+    //This is the global variable which tells us which option the driver is on
     var currentDrivingOption = "OffDuty"
     
     //---This is hiding the table view which lists all the different driving options ----//
@@ -28,11 +31,15 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     //END
+    
+    //Table is here:
     @IBOutlet var drivingOptionsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO : load all the information from the database based on the username and password from the last page
         // Do any additional setup after loading the view.
+        
+        //The following is for the table delegate and datasource:
         self.drivingOptionsTable.delegate = self
         self.drivingOptionsTable.dataSource = self
     }
@@ -64,7 +71,6 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
 //            cell.textLabel?.isEnabled = false
 //        }
         
-        //END
         return cell
         
     }
@@ -87,9 +93,10 @@ class HoursOfServiceViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
+    //END
+
     
-    
-    //---- DO THE NEW EVENT WHENEVER SOMETHING IS PICKED ------//
+    //---- TODO: THE NEW EVENT WHENEVER SOMETHING Different IS PICKED ------//
     
     func popNewEvent(drivingOption : String){
         //TODO Over here I want to present popover presentation of the event creater
