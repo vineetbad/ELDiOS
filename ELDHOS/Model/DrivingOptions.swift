@@ -16,4 +16,7 @@ struct DrivingOptions {
         case OnDuty
         case Driving
     }
+    
+    
+    let reasonSelectedCreateEvent = ["No reason selected", "Rental Vehicle no ELD on-board", "ELD Device Failure", "Missing GPS Location", "Incorrect Status Selected", "Incorrect Data Entered", "Driver Not Logged on", "Engineers Road Test"]
 }
